@@ -221,7 +221,7 @@ button {
     margin-bottom: 0;
   }
   .icon-nav {
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -263,19 +263,22 @@ button {
 }
 @media screen and (min-width: 1440px) {
   .nav-top-cart .cart {
-    margin-top: 10px;
-    margin-right: 15px;
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-left: -10px;
   }
   nav {
     font-weight: bold;
     padding-top: 6px;
     padding-bottom: 6px;
+    padding-left: 30px;
   }
   .logo-nav {
     margin-bottom: 0;
+    margin-top: 4px;
   }
   .icon-nav {
-    width: 222px;
+    width: 240px;
   }
   .icon-link-element {
     font-size: 27px;
@@ -725,7 +728,7 @@ button {
   .product-card {
     width: 50%;
     padding: 0 15px;
-    padding: 0 15px 0 0;
+    padding: 0 0 0 15px;
     box-sizing: border-box;
   }
 }
@@ -737,7 +740,7 @@ button {
     width: 25%;
     padding: 0 15px;
     box-sizing: border-box;
-    padding: 0 15px 0 0;
+    padding: 0 0 0 15px;
   }
   .product-name {
     font-family: OpenSans, sans-serif;
@@ -767,7 +770,6 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .product-image-img {
-    height: 324px;
     width: 100%;
   }
   .product-card {
@@ -822,6 +824,9 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  .product-image-img {
+    height: 324px;
   }
   .product-image-container {
     margin-bottom: 15px;
@@ -888,13 +893,14 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
     background-color: #FFF;
     box-sizing: border-box;
   }
   .blog-image-container {
     width: 100%;
     max-width: 361px;
-    height: 150px;
     position: relative;
     overflow: hidden;
   }
@@ -936,6 +942,7 @@ button {
   }
   .blog-name {
     font-family: OpenSans, sans-serif;
+    font-weight: 400;
     font-style: normal;
     font-size: 16px;
     margin-bottom: 18px;
@@ -979,34 +986,28 @@ button {
 }
 @media screen and (min-width: 425px) {
   .blog-slider {
-    max-width: 100%;
+    width: 100%;
+    max-width: 768px;
   }
   .blog-card {
-    width: 361px;
-    max-width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
+    width: calc(calc(100vw/2) - 20px);
   }
   .blog-image-container {
     width: 100%;
-    max-width: 361px;
-    height: 202px;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   .blog-slider {
-    max-width: 720px;
+    width: 100%;
+    max-width: 1024px;
   }
   .blog-card {
-    width: 350px;
-    max-width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
+    width: calc(calc(100vw/2) - 20px);
   }
   .blog-image-container {
     width: 100%;
-    max-width: 350px;
-    height: 202px;
+    max-width: 100%;
   }
   .blog-name {
     font-size: 16px;
@@ -1017,18 +1018,16 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .blog-slider {
-    max-width: 980px;
+    width: 100%;
+    max-width: 1140px;
   }
   .blog-card {
-    width: 310px;
-    max-width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
+    width: calc(calc(100vw/3) - 20px);
+    max-width: calc(calc(1140px/3) - 20px);
   }
   .blog-image-container {
     width: 100%;
-    max-width: 361px;
-    height: 180px;
+    max-width: 100%;
   }
   .blog-container {
     padding-top: 73px;
@@ -1076,6 +1075,7 @@ button {
   }
   .blog-slider {
     max-width: 1140px;
+    width: 100%;
   }
 }
 /*......... Import source ..........*/
@@ -1301,19 +1301,18 @@ button {
     color: #FFF;
   }
 }
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 425px) {
   .footer-up {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
-    align-items: flex-start;
   }
   .footer-down-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: center;
+    row-gap: 15px;
   }
   .footer-about {
     max-width: 100%;
@@ -1337,13 +1336,26 @@ button {
     justify-content: center;
   }
   .copy-right {
-    order: 1;
+    order: 2;
   }
   .payment-container {
-    order: 2;
+    order: 1;
   }
 }
 @media screen and (min-width: 768px) {
+  .footer-up {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .footer-down-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
   .copy-right {
     padding-bottom: 0;
     word-spacing: 2px;
@@ -1410,6 +1422,12 @@ button {
   }
   .footer-nav {
     margin-bottom: 10px;
+  }
+  .footer-location-phone {
+    margin-top: 20px;
+  }
+  .footer-location-icon-mail {
+    margin-bottom: 5px;
   }
   .copy-right {
     order: 1;
